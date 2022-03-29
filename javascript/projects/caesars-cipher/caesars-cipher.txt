@@ -1,0 +1,27 @@
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+function rot13(str) {
+  const convertedStrArr = [];
+  for (let i=0; i<=str.length; i++) {
+
+    // Check if character is not part of the Alphabet (-1),
+    // if it is not, push the character to the array, as is
+    if (ALPHABET.indexOf(str[i]) !== -1) {
+      let charIndexStart = ALPHABET.indexOf(str[i]);
+
+      // calculate index of character, after ROT13: 
+      // if we reach the end of the Alphabet - start at index 0 again
+      let charIndexEnd = (charIndexStart + 13 < ALPHABET.length) 
+                          ? charIndexStart + 13
+                          : 13 - (ALPHABET.length - charIndexStart);
+      convertedStrArr.push(ALPHABET[charIndexEnd])
+    } else {
+      convertedStrArr.push(str[i]);
+    }
+  }
+  // "join" the array into a string again and return it
+  return convertedStrArr.join('')
+}
+
+console.log(rot13("N SERR PBQR PNZC"));
+console.log(rot13("A FREE CODE CAMP"));
