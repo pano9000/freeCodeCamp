@@ -1,0 +1,9 @@
+function spinalCase(str) {
+  let spinalStr = str.split(/(?<=[a-z])(?=[A-Z])|\s|_/);
+  //spinalStr = spinalStr.split(/{' '}+/g);
+  spinalStr = spinalStr.map(elem => elem.toLowerCase());
+  spinalStr = spinalStr.join('-');
+  return spinalStr;
+}
+
+console.log(spinalCase('thisIs Spinal Tap'));
