@@ -1,0 +1,26 @@
+/* 
+A -> AT
+T -> TA
+C -> CG
+G -> GC
+*/
+
+const BASE_PAIRS = {
+  A: ['A', 'T'],
+  T: ['T', 'A'],
+  C: ['C', 'G'],
+  G: ['G', 'C']
+}
+
+function pairElement(str) {
+  const strArr = Array.from(str);
+  console.log(strArr);
+  const w = strArr.map( elem => BASE_PAIRS[elem] )
+
+  console.log(w)
+
+  
+  return w;
+}
+
+pairElement("GCG");
