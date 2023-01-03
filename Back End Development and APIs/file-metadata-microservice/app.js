@@ -6,6 +6,7 @@ const routes = require("./src/backend/routes")
 
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.json());
 app.use("/", routes);
 
 
