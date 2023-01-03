@@ -12,5 +12,7 @@ module.exports = {
       post: require("./api/fileanalysis")
     },
 
+    upload: require("./api/multer")
+
   }
 }
