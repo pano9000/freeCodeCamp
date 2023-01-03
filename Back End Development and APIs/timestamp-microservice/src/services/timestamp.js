@@ -22,10 +22,7 @@ function dateFunct(dateParam) {
     console.log("ooo", ooo, Date.now())
 
     if (isNaN(ooo.valueOf())) {
-      const response = {
-        "error": "Invalid Date"
-      }
-      return response;
+      throw new Error("Invalid Date");
     }
 
     const response = {
@@ -38,12 +35,11 @@ function dateFunct(dateParam) {
     console.log(k.join("-"))
     let ooo = new Date(k.join(" "))
     console.log("ooo in else", ooo, ooo === null, typeof(ooo.valueOf()), ooo.valueOf())
+
     if (isNaN(ooo.valueOf())) {
-      const response = {
-        "error": "Invalid Date"
-      }
-      return response;
+      throw new Error("Invalid Date");
     }
+
     const response = {
       "unix": ooo.valueOf(),
       "utc": ooo.toUTCString()
