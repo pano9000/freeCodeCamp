@@ -1,55 +1,27 @@
 function dateFunct(dateParam) {
 
-  console.log("******datefunc start ******", Date.now())
-
   if (dateParam === undefined) {
-    const dateNow = new Date();
-    console.log(dateNow)
-    const response = {
-      "unix": dateNow.valueOf(),
-      "utc": dateNow.toUTCString()
-    }
-    return response;
+    return createDateResponse()
   }
 
-  console.log("reqparams", dateParam, Date.now());
   const splitRegExp = /\s|-/g
-  let k = dateParam.split(splitRegExp);
-  console.log("k", k, k.length, k.length === 1, Date.now())
+  const splitDateParam = dateParam.split(splitRegExp);
+  const dateFromParam = ( splitDateParam.length === 1 ) ? new Date( +splitDateParam[0] ) : new Date(splitDateParam.join(" "))
 
-  if (k.length === 1) {
-    let ooo = new Date(parseInt(k[0]))
-    console.log("ooo", ooo, Date.now())
-
-    if (isNaN(ooo.valueOf())) {
-      throw new Error("Invalid Date");
-    }
-
-    const response = {
-      "unix": ooo.valueOf(),
-      "utc": ooo.toUTCString()
-    }
-    return response;
-
-  } else if (k.length > 1) {
-    console.log(k.join("-"))
-    let ooo = new Date(k.join(" "))
-    console.log("ooo in else", ooo, ooo === null, typeof(ooo.valueOf()), ooo.valueOf())
-
-    if (isNaN(ooo.valueOf())) {
-      throw new Error("Invalid Date");
-    }
-
-    const response = {
-      "unix": ooo.valueOf(),
-      "utc": ooo.toUTCString()
-    }
-    return response;
+  if (dateFromParam === undefined || isNaN(dateFromParam.valueOf())) {
+    throw new Error("Invalid Date");
   }
 
+  return createDateResponse(dateFromParam.valueOf())
 }
 
-function response(unix, utc) {
+
+function createDateResponse(unixDate = Date.now()) {
+
+  return {
+    "unix": unixDate,
+    "utc": (new Date(unixDate)).toUTCString()
+  }
 
 }
 
