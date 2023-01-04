@@ -1,7 +1,9 @@
 function fileanalysis(req, res) {
 
   try {
-
+    if (req.file === undefined) {
+      throw new Error("Empty File")
+    }
     const fileInfo = {
       name: req.file.originalname,
       type: req.file.mimetype,
@@ -12,7 +14,7 @@ function fileanalysis(req, res) {
 
   }
   catch (error) {
-    res.status(500).json({"error": error.message})
+    res.status(500).json({"error": error.message  })
   }
 
 
