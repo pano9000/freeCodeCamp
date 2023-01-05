@@ -9,8 +9,8 @@ const btnClipboard = document.getElementById("btn_clipboard")
 form.addEventListener("submit", submitHandler);
 btnClipboard.addEventListener("click", copyToClipboard)
 
-async function submitHandler(element) {
-
+async function submitHandler(event) {
+  const element = event.target
   try {
     clipboardStatus("reset");
     element.preventDefault();
@@ -64,7 +64,7 @@ function showMessage(messageData) {
 
 }
 
-function copyToClipboard(element) {
+function copyToClipboard(event) {
 
   navigator.clipboard.writeText(textField.value);
   clipboardStatus("copied")
