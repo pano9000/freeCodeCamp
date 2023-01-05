@@ -1,8 +1,9 @@
-const { showMessage, isValidFile } = require("../utils")
-const { fieldsetElem, btnSubmit, messageElem } = require("../elements")
+const { showMessage, isValidFile, resetResult } = require("../utils")
+const { fieldsetElem, btnSubmit, messageElem, resultsElem } = require("../elements")
 
 function fileInputHandler(event) {
 
+  resetResult(resultsElem);
   fieldsetElem.classList.remove("box_info")
   fieldsetElem.classList.remove("box_ok")
   fieldsetElem.classList.remove("box_error")
