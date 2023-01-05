@@ -14,6 +14,7 @@ Frontend (for simplicity's sake not using any JS framework):
 * Plain JS
 * Plain CSS
 * Plain HTML
+* Webpack for JS bundling
 
 TODO:
 * Check if Multer's memory store "empties" itself, or if something needs to be done manually
