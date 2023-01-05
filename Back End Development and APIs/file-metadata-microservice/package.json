@@ -1,6 +1,6 @@
 {
   "name": "file_metadata",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "API project for freeCodeCamp",
   "main": "server.js",
   "scripts": {
@@ -28,5 +28,9 @@
     "mocha": "^10.2.0",
     "nodemon": "^2.0.20",
     "webpack-cli": "^5.0.1"
+  },
+  "author": {
+    "name": "Panagiotis Papadopoulos (pano900)",
+    "url": "https://github.com/pano9000"
   }
 }
