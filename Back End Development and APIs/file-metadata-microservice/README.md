@@ -15,6 +15,12 @@ Frontend (for simplicity's sake not using any JS framework):
 * Plain CSS
 * Plain HTML
 
+TODO:
+* Check if Multer's memory store "empties" itself, or if something needs to be done manually
+* Add loading spinner to frontent, when uploading files
+
+---
+
 FCC Ressources
 * [Github with Original Boilerplate from FCC](https://github.com/freeCodeCamp/boilerplate-project-filemetadata)
 * [FCC Version Live Replit Demo](https://file-metadata-microservice.freecodecamp.rocks/)
