@@ -10,19 +10,77 @@
 
    <body>
       <main class="container">
-        <section>
-          <h2>API Project: File Metadata Microservice</h2>
-
-          <h3>Usage:</h3>
-          <p>
-            Please Upload a File ...
-          </p>
-          <div class="view">
-            <h4 id="output"></h4>
+        <h1>API Project: File Metadata Microservice</h1>
+        <section id="section_info">
+          <div class="box box_info">
+            <h2>What Does It Do</h2>
+            <ul>
+              <li>Upload any file and get back information about that file, like:
+                <ul>
+                  <li>Filename</li>
+                  <li>MIME File Type</li>
+                  <li>Filesize</li>
+                </ul>
+              </li>
+              <li>
+                Some other additional feature that would make sense to be done on the backend, e.g. like
+                <ul>
+                  <li>virus scanning the file with ClamAV</li>
+                  <li>getting back some other specific info, e.g. EXIF data from a picture</li>
+                  <li>&hellip;</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="box box_info">
+            <h2>Usage</h2>
+            <ul>
+              <li>Drag and Drop a file below or click on the file selector to select one for uploading and wait for the upload to complete.</li>
+              <li>Please note that there is a 10MB file limit present.</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="">
+          <fieldset id="fieldset_upload" class="box box_info">
+            <!--<legend>File Upload</legend>-->
+            <!--<h3 id="output"></h3>-->
+            <h2>File Upload</h2>
             <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+              <div id="dragdrop">
+                <div id="dragdrop_info_wrap">
+                  <img id="dragdrop_icon" src="/public/fileicon.svg">
+                  <p>Drag and Drop Here</p>
+                </div>
+              </div>
               <input id="inputfield" type="file" name="upfile">
-              <input id="button" type="submit" value="Upload">
+              <button id="btn_submit" type="submit" disabled>Upload</button>
+              <span id="input_message" class="message"></span>
             </form>
+          </fieldset>
+
+          <div class="box box_info">
+            <h2>Results</h2>
+            <div id="wrap_results">
+              <div>
+                <h3>Name</h3>
+                <p id="result_name"></p>
+              </div>
+
+              <div>
+                <h3>MIME Filetype</h3>
+                <p id="result_type"></p>
+              </div>
+
+              <div>
+                <h3>Filesize</h3>
+                <p id="result_size_bytes"></p>
+                <p id="result_size_kb"></p>
+                <p id="result_size_mb"></p>
+              </div>
+
+          </div>
+
           </div>
         </section>
       </main>

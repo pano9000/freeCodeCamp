@@ -1,42 +1,128 @@
 /****** Main Styling ******/
 
+:root {
+  --box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #222;
-  background-color: #ECF0F1;
+  background-color: #ECF0F0;
+}
+
+h1 {
   text-align: center;
+}
+
+li {
+  margin: 0.25rem 0rem;
 }
 
 main {
   padding: 0;
-  margin-top: 40px;
+  margin: 2rem auto;
+  max-width: 60rem;
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 a {
   color: #2574A9;
 }
 
-input {
+#fieldset_upload {
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+  background-color: #FFF5F0;
+  transition: border 0.2s;
+}
+
+.box_info {
+  border-left: 1rem lightgray solid;
+}
+
+.box_ok {
+  border-left: 1rem lightgreen solid;
+}
+
+.box_error {
+  border-left: 1rem red solid;
+}
+
+#dragdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  border: #222 dashed 2px;
+  margin: 0rem auto 1rem auto;
+}
+
+#dragdrop_icon {
   display: block;
-  position: relative;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
-input#button {
-  width: 230px;
+.message {
+  opacity: 0;
+  background: lightgray;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  box-shadow: var(--box-shadow);
+  transition: opacity 0.2s;
 }
 
-.view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
-  padding: 20px;
-  width: 60%;
-  min-width: 400px;
+.message_error::before {
+  content: "❌";
+
+}
+
+.message_ok::before {
+  content: "✔️";
+}
+
+#inputfield {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#wrap_results {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+
+  #wrap_results {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  #section_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+  }
+
 }
