@@ -14,5 +14,10 @@ module.exports = {
 
     upload: require("./api/multer")
 
+  },
+
+  rateLimiter: {
+    post: require("./rateLimiter").post,
+    get: require("./rateLimiter").get
   }
 }
