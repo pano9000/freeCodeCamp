@@ -40,7 +40,7 @@
             </ul>
           </div>
         </section>
-        
+
         <section class="">
           <fieldset id="fieldset_upload" class="box box_info">
             <!--<legend>File Upload</legend>-->
@@ -61,6 +61,10 @@
 
           <div class="box box_info">
             <h2>Results</h2>
+            <div id="wrap_loading">
+              <img id="loading_icon" src="/public/spinner.svg">
+              <p>Loading&hellip;</p>
+            </div>
             <div id="wrap_results">
               <div>
                 <h3>Name</h3>
@@ -78,8 +82,7 @@
                 <p id="result_size_kb"></p>
                 <p id="result_size_mb"></p>
               </div>
-
-          </div>
+            </div>
 
           </div>
         </section>

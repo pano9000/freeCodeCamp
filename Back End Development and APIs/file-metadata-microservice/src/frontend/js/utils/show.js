@@ -38,9 +38,14 @@ function showError(element, errorResponse) {
 
 }
 
+function loadingSpinner(element, status) {
+  element.style.display = (status === "start") ? "block" : "none";
+}
+
 module.exports = {
   showMessage,
   showResult,
   showError,
-  resetResult
+  resetResult,
+  loadingSpinner
 }

@@ -10,5 +10,5 @@ module.exports = {
   resultSizeBytes: document.getElementById("result_size_bytes"),
   resultSizeKb: document.getElementById("result_size_kb"),
   resultSizeMb: document.getElementById("result_size_mb"),
-
+  loadingElem: document.getElementById("wrap_loading")
 }

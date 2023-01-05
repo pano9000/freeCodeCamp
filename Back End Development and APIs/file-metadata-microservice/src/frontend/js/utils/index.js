@@ -6,5 +6,6 @@ module.exports = {
   showMessage: show.showMessage,
   showResult: show.showResult,
   showError: show.showError,
-  resetResult: show.resetResult
+  resetResult: show.resetResult,
+  loadingSpinner: show.loadingSpinner
 }

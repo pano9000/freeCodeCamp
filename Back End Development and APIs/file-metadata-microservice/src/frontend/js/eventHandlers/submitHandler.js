@@ -1,11 +1,12 @@
-const { showResult, showError, postToAPI } = require("../utils")
+const { showResult, showError, postToAPI, loadingSpinner } = require("../utils")
 const {
   resultsElem,
   resultName,
   resultType,
   resultSizeBytes,
   resultSizeKb,
-  resultSizeMb } = require("../elements")
+  resultSizeMb,
+  loadingElem } = require("../elements")
 
 
 async function submitHandler(event) {
@@ -17,6 +18,7 @@ async function submitHandler(event) {
   const formData = new FormData(element.form)
 
   try {
+    loadingSpinner(loadingElem, "start");
     const response = await postToAPI(serverUrl, formData);
 
     const resultChildElems = {
@@ -26,6 +28,7 @@ async function submitHandler(event) {
       resultSizeKb,
       resultSizeMb,
     }
+    loadingSpinner(loadingElem, "stop");
 
     showResult(response, resultsElem, resultChildElems)
 

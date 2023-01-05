@@ -126,3 +126,26 @@ a {
   }
 
 }
+
+#wrap_loading {
+  display: none;
+  text-align: center;
+}
+
+#loading_icon {
+  display: block;
+  margin: 0 auto;
+  min-height: 1rem;
+  transform: rotate(360deg);
+  animation: 3s linear infinite rotate-icon;
+}
+
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
