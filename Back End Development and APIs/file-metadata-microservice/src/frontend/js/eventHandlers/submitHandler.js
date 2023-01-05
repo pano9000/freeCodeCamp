@@ -27,11 +27,10 @@ async function submitHandler(event) {
       resultSizeMb,
     }
 
-    console.log("subhad", response, resultsElem)
     showResult(response, resultsElem, resultChildElems)
 
   } catch(error) {
-    console.log("yooo", error)
+
     showError(resultsElem, error.message)
   }
 
