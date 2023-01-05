@@ -16,10 +16,6 @@ Frontend (for simplicity's sake not using any JS framework):
 * Plain HTML
 * Webpack for JS bundling
 
-TODO:
-* Check if Multer's memory store "empties" itself, or if something needs to be done manually
-* Add loading spinner to frontent, when uploading files
-
 ---
 
 FCC Ressources
