@@ -38,6 +38,11 @@ async function postToAPI(serverUrl, data) {
       },
       body: data.toString()
     })
+
+    if (result.ok !== true) {
+      throw new Error()
+    }
+
     const json = await result.json()
     console.log("result", json)
 
