@@ -4,7 +4,9 @@
   "description": "API project for freeCodeCamp",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "webpack-dev": "webpack --config webpack.config.dev.js",
+    "webpack-prod": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
