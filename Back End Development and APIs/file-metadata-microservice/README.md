@@ -1,6 +1,6 @@
-# [File Metadata Microservice](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice)
+# File Metadata Microservice
 
-My solution for the "File Metadata Microservice" project from [freeCodeCamp](https://www.freecodecamp.org/).
+My solution for the [File Metadata Microservice](https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice) project from [freeCodeCamp](https://www.freecodecamp.org/).
 
 Check the code in action: [Live Demo on Replit](https://boilerplate-project-filemetadata.panagiotispapa3.repl.co)
 
