@@ -1,0 +1,3 @@
+[submodule "Back End Development and APIs/exercise-tracker"]
+	path = Back End Development and APIs/exercise-tracker
+	url = https://github.com/freeCodeCamp/boilerplate-project-exercisetracker.git
