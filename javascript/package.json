@@ -1,0 +1,15 @@
+{
+  "name": "pano9000-freecodecamp-javascript",
+  "version": "1.0.0",
+  "description": "My solutions for the freeCodeCamp Course 'JavaScript Algorithms and Data Structures'",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js"
+  },
+  "author": "Panagiotis Papadopoulos (@pano9000)",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
