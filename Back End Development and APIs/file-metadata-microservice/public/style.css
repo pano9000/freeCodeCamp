@@ -136,7 +136,6 @@ a {
   display: block;
   margin: 0 auto;
   min-height: 1rem;
-  transform: rotate(360deg);
   animation: 3s linear infinite rotate-icon;
 }
 
@@ -145,7 +144,7 @@ a {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   
 }
