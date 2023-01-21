@@ -1,3 +1,6 @@
 [submodule "Back End Development and APIs/exercise-tracker"]
 	path = Back End Development and APIs/exercise-tracker
 	url = https://github.com/pano9000/freeCodeCamp_backend_exercise-tracker.git
+[submodule "quality-assurance/metric-imperial-converter"]
+	path = quality-assurance/metric-imperial-converter
+	url = https://github.com/pano9000/freeCodeCamp_quality-assurance_metric-imperial-converter
