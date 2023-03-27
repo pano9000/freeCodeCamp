@@ -7,6 +7,11 @@ inputPalindrome.addEventListener('input', function() {
     }
  });
 
+ /**
+  * Check if entered string is a palindrome
+  * @param {String} str 
+  * @returns {Boolean}
+  */
 function palindromeChecker(str) {
     let fwdStr = str.replace(/[\W_]/g,'').toLowerCase();
     let revStrArr = [];
