@@ -13,7 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
-    "mongoose": "^6.8.1",
+    "mongoose": "^6.11.3",
     "node-fetch": "^2.6.7",
     "routes": "^2.1.0",
     "validator": "^13.7.0"
