@@ -26,7 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.3.7",
-    "mocha": "^10.2.0",
+    "mocha": "^10.8.2",
     "nodemon": "^2.0.20",
     "webpack-cli": "^5.0.1"
   },
